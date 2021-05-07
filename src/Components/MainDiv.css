@@ -1,0 +1,9 @@
+.maindiv{
+    border-radius: 25px;
+    height: 95vh;
+    width: 100vw;
+    background-color: #FCFCFD;
+    position: relative;
+    left: 1rem;
+    padding: 1rem 2.5rem;
+}

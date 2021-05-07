@@ -1,0 +1,20 @@
+.sidebar{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.app__sidebar__button{
+    color: #817C9B;
+    font-size: 15px;
+    margin: 25px 10px;
+}
+.app__sidebar__button p{
+    margin-top: 0;
+    padding: 0px 5px;
+    align-content: center;
+}
+.app__sidebar__button .MuiIconButton-root{
+    color: #817C9B;
+    margin-left: 10px;
+}
