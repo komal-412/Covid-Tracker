@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+
+.maindiv{
+    border-radius: 25px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fcfafa;
+    position: relative;
+    left: 1rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    display: flex;
+    margin:0;
+}
+p{
+    color: #1A1053;
+    font-weight: bolder;
+    margin: 6px;
+    text-align: flex-start;
+}
+p strong {
+    color: #6236FF;
+    font-weight: bolder;
+}
+.maindiv__left__cards{
+    display: flex;
+    height: "30%";
+}
