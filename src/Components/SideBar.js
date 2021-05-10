@@ -14,7 +14,7 @@ function SideBar() {
                 </IconButton>
             </div>
             </Link>
-            <p>Overview</p>
+            <p>Home</p>
             <Link to='/symptoms'>
             <div className="app__sidebar__button">
                 <IconButton>
@@ -30,7 +30,7 @@ function SideBar() {
                 </IconButton>
             </div>
             </Link>
-            <p className="p3">Journal</p>
+            <p className="p3">Updates</p>
         </div>
     );
 }

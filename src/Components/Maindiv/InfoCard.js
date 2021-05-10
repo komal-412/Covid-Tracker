@@ -13,7 +13,7 @@ const style= makeStyles({
         textAlign: 'flex-start',
         width: "10vw",
         height: "12vh",
-        padding: "5px",
+        padding: "5px 0",
         margin: "10px"
     },
     title: {
@@ -37,7 +37,7 @@ const style= makeStyles({
     icon : {
         margin: '10px',
         height: '50px',
-        color: '#bebebe'
+        color: '#6236ff'
     }
 });
 function InfoCard({title, cases, clr}) {

@@ -8,7 +8,7 @@ function MainDIv() {
     return (
         <Grid container direction="column" className="maindiv">
             <Grid container direction="column" className="maindiv__left">
-                {/* <p><strong>Covid-19 </strong> &nbsp; Global Trend</p> */}
+                <p>&nbsp;Global Trend</p>
                 <div className="maindiv__left__cards">
                     <Grid container direction="row" justify="flex-start" alignItems="center">
                         <InfoCard title="Total Confirmed" cases="12456" clr='pink' />
@@ -20,7 +20,7 @@ function MainDIv() {
                 <Stats />
             </Grid>
             <div className="maindiv__right">
-
+                
             </div>
         </Grid>
     )

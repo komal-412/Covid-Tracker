@@ -4,9 +4,10 @@
 
 body{
     background-color: #1A1053;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .app{
     display: flex;
+    height: 100%;
 }

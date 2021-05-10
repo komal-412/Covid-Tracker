@@ -15,7 +15,7 @@
     margin-left: 10px;
 }
 .app__sidebar__button .MuiIconButton-root:hover{
-    background-color:white;
+    background-color:#f0f8ff;
 }
 .sidebar__link{
     margin: 0;

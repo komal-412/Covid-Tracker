@@ -1,0 +1,29 @@
+.map{
+    padding: 1rem;
+    margin: 12px;
+    background-color: white;
+    max-width: 60vw;
+    height: 60vh;
+    border-radius: 10px;
+    display: flex;
+}
+.table {
+    overflow: scroll;
+    overflow-x: hidden;
+    color: #6a5d5d;
+    background-color: white;
+    margin: 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+.table tr{
+    display: flex;
+    justify-content: space-between;
+}
+.table td{
+    padding: 0.5rem;
+    border: none;
+}
+.table tr:nth-of-type(odd){
+    background-color: #f3f2f8;
+}
