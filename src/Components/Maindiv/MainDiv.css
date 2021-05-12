@@ -1,29 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
-
 .maindiv{
-    border-radius: 25px;
-    height: 100%;
-    /* width: 100vw; */
-    background-color: #f0f8ff;
-    position: relative;
-    left: 1rem;
-    padding: 20px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
     display: flex;
-    margin:0;
+    background-color: azure;
+    border-radius: 20px;
+    padding: 30px;
+    flex-wrap: nowrap;
 }
-p{
-    color: #1A1053;
-    font-weight: bolder;
-    margin: 6px;
-    text-align: flex-start;
-}
-p strong {
-    color: #6236FF;
-    font-weight: bolder;
-}
-.maindiv__left__cards{
+.stat__card{
     display: flex;
-    height: "30%";
+    justify-content: space-evenly;
+}
+.infocard{
+    margin: 20px;
+}
+.stat__map{
+    display: flex;
+    direction: row;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+}
+.left_container{
+    width: 70%;
+}
+.right_container{
+    padding: 10px;
+    margin: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 990px) {
+    .stat__map{
+        direction: column;
+        flex-wrap: wrap;
+    }
+    .left_container{
+        width: 100%;
+    }
+    .maindiv{
+        flex-wrap: wrap;
+    }
 }

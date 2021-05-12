@@ -1,0 +1,8 @@
+.symptoms{
+    padding: 20px;
+    width: 90%;
+}
+.symptoms__content{
+    width: 70%;
+    text-align: justify;
+}

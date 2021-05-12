@@ -11,8 +11,8 @@ const style= makeStyles({
     },
     card: {
         textAlign: 'flex-start',
-        width: "10vw",
-        height: "12vh",
+        width: "100%",
+        height: "20%",
         padding: "5px 0",
         margin: "10px"
     },

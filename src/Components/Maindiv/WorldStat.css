@@ -1,20 +1,15 @@
-.map{
-    padding: 1rem;
-    margin: 12px;
-    background-color: white;
-    max-width: 60vw;
-    height: 60vh;
-    border-radius: 10px;
-    display: flex;
-}
-.table {
+.table{
     overflow: scroll;
     overflow-x: hidden;
     color: #6a5d5d;
     background-color: white;
-    margin: 10px;
+    /* margin: 10px; */
     padding: 0px 10px;
     font-size: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .table tr{
     display: flex;
@@ -22,8 +17,15 @@
 }
 .table td{
     padding: 0.5rem;
+    margin: 1px;
     border: none;
 }
 .table tr:nth-of-type(odd){
     background-color: #f3f2f8;
+}
+
+@media screen and (max-width: 990px) {
+    .table{
+        width: 100%;
+    }
 }

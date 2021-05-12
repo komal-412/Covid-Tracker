@@ -1,28 +1,33 @@
-import { Grid } from '@material-ui/core'
+import { Card, CardContent, Grid } from '@material-ui/core'
 import React from 'react'
 import InfoCard from './InfoCard'
 import './MainDiv.css'
-import Stats from './Stats'
+import Map from './Map'
+import Graph from './Graph'
+import WorldStat from './WorldStat'
+import Symptoms from './Symptoms'
 
 function MainDIv() {
     return (
-        <Grid container direction="column" className="maindiv">
-            <Grid container direction="column" className="maindiv__left">
-                <p>&nbsp;Global Trend</p>
-                <div className="maindiv__left__cards">
-                    <Grid container direction="row" justify="flex-start" alignItems="center">
-                        <InfoCard title="Total Confirmed" cases="12456" clr='pink' />
-                        <InfoCard title="Active confirmed" cases="12456" clr='orange' />
-                        <InfoCard title="Recovered" cases="12456" clr='green' />
-                        <InfoCard title="Death" cases="12456" clr='blue' />
-                    </Grid>
-                </div>
-                <Stats />
-            </Grid>
-            <div className="maindiv__right">
-                
-            </div>
+        <Grid  className="maindiv">
+            <div className="left_container">
+                <Grid container className="stat__card">
+                <InfoCard className="infocard" title="Total Confirmed" cases="12456" clr='pink' />
+                <InfoCard title="Active confirmed" cases="12456" clr='orange' />
+                <InfoCard title="Recovered Cases" cases="12456" clr='green' />
+                <InfoCard title="Total Deaths" cases="12456" clr='blue' />
+                </Grid>
+                <Grid className="stat__map">
+                    <Map />
+                    <WorldStat/>
+                </Grid>
+        </div>
+        <div className="right_container">
+            <Symptoms/>
+            <Graph />
+        </div>
         </Grid>
+        
     )
 }
 
