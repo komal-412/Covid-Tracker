@@ -1,11 +1,11 @@
-import { Card, CardContent, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import React from 'react'
-import InfoCard from './InfoCard'
+import InfoCard from '../InfoCard'
 import './MainDiv.css'
-import Map from './Map'
-import Graph from './Graph'
-import WorldStat from './WorldStat'
-import Symptoms from './Symptoms'
+import Map from '../Map/Map'
+import Graph from '../Graph'
+import WorldStat from '../WorldStat/WorldStat'
+import Symptoms from '../Symptoms/Symptoms'
 
 function MainDIv() {
     return (
@@ -23,8 +23,19 @@ function MainDIv() {
                 </Grid>
         </div>
         <div className="right_container">
-            <Symptoms/>
-            <Graph />
+            <Symptoms className="symptom_card"/>
+            <div className="states_data">
+                <h4>Top States</h4>
+                <div className="state 1">
+                    <p>Delhi</p>
+                </div>
+                <div className="state 2">
+                <p>Delhi</p>
+                </div>
+                <div className="state 3">
+                <p>Delhi</p>
+                </div>
+            </div>
         </div>
         </Grid>
         

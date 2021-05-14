@@ -8,6 +8,7 @@ const style= makeStyles({
         margin: "10px",
         borderRadius: '10px',
         display: 'flex',
+        // boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.3)"
     },
     card: {
         textAlign: 'flex-start',

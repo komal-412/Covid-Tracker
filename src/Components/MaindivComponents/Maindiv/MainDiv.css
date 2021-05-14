@@ -31,7 +31,21 @@
     display: flex;
     flex-direction: column;
 }
-
+.states_data{
+    width: 80%;
+    background-color: white;
+    padding: 10px;
+    margin: 20px 10px;
+    border-radius: 20px;
+}
+.states_data h4{
+    color: orangered;
+    padding: 10px;
+}
+.state{
+    padding: 0 10px;
+    margin: 10px
+}
 @media screen and (max-width: 990px) {
     .stat__map{
         direction: column;
@@ -42,5 +56,9 @@
     }
     .maindiv{
         flex-wrap: wrap;
+    }
+    .right_container{
+        display: flex;
+        direction: row;
     }
 }

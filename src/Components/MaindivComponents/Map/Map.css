@@ -1,12 +1,16 @@
-.stats__card{
-    width: 90;
+.stat__map{
+    padding: 20px;
 }
 .map{
     border-radius: 10px;
     margin: 10px;
     align-self: center;
 }
-
+.leaflet-container{
+    height: 40vh;
+    width: 35vw;
+    border-radius:"10px";
+}
 ::-webkit-scrollbar  {
     width: 10px;
 }
@@ -18,4 +22,8 @@
     background: #918686; 
     border-radius: 10px;
 }
-
+@media screen and (max-width:990px){
+    .leaflet-container{
+        width: 60vw;
+    }
+}

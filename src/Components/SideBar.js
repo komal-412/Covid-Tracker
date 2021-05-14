@@ -9,28 +9,25 @@ function SideBar() {
         <div className="sidebar">
             <Link to='/' className="sidebar__link">
             <div className="app__sidebar__button">
-                <IconButton>
+                <IconButton className="sidebar__button">
                     <HomeRounded/>
                 </IconButton>
             </div>
             </Link>
-            <p>Home</p>
             <Link to='/symptoms'>
             <div className="app__sidebar__button">
-                <IconButton>
-                    <HealingRounded  style={{color: "#817C9B"}} />
+                <IconButton className="sidebar__button">
+                    <HealingRounded/>
                 </IconButton>
             </div>
             </Link>
-            <p className="p2">Symptoms</p>
             <Link to='/journal'>
             <div className="app__sidebar__button">
-                <IconButton>
-                    <FormatListBulletedRounded  style={{color: "#817C9B"}} />
+                <IconButton className="sidebar__button">
+                    <FormatListBulletedRounded />
                 </IconButton>
             </div>
             </Link>
-            <p className="p3">Updates</p>
         </div>
     );
 }

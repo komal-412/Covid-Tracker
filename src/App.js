@@ -1,6 +1,6 @@
 import './App.css';
 import SideBar from './Components/SideBar'
-import MainDiv from './Components/Maindiv/MainDiv'
+import MainDiv from './Components/MaindivComponents/Maindiv/MainDiv'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {

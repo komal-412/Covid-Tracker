@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #1A1053;
+    background-color: azure;
     overflow-x: hidden;
 }
 
@@ -18,5 +18,5 @@ p{
 }
 h3{
     font-family: 'Quicksand', sans-serif;
-    color: #6263ff;
+    color: white;
 }
