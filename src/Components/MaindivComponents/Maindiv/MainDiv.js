@@ -8,30 +8,62 @@ import WorldStat from '../WorldStat/WorldStat'
 import Symptoms from '../Symptoms/Symptoms'
 
 function MainDIv() {
-    const [countryInput, setCountryInput] = useState("worldwide");
-    const [stats, setStats] = useState([]);
-    const [countryInfo, setcountryInfo] = useState([]);
-    const [countriesData, setcountriesData] = useState([]);
+    const [country, setInputCountry] = useState("worldwide");
+    const [countryInfo, setCountryInfo] = useState({});
+    const [countries, setCountries] = useState([]);
+    const [mapCountries, setMapCountries] = useState([]);
+    const [tableData, setTableData] = useState([]);
+    const [casesType, setCasesType] = useState("cases");
+    const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+    const [mapZoom, setMapZoom] = useState(3);
 
     useEffect(() => {
         fetch("https://disease.sh/v3/covid-19/all")
-        .then((response) => response.json())
-        .then((data) => {
-            setcountryInfo(data);
-        })
-    }, []);
+            .then((response) => response.json())
+            .then((data) => {
+                setCountryInfo(data);
+            });
+        }, []);
     
-    useEffect(()=>{
-        fetch("https://disease.sh/v3/covid-19/countries")
-        .then((response) => response.json())
-        .then((data) => {
-            setcountriesData(data);
-        });
-    },[])
+      useEffect(() => {
+        const getCountriesData = async () => {
+            fetch("https://disease.sh/v3/covid-19/countries")
+                .then((response) => response.json())
+                .then((data) => {
+                const countries = data.map((country) => ({
+                    name: country.country,
+                    value: country.countryInfo.iso2,
+                }));
+                setCountries(countries);
+                setMapCountries(data);
+                setTableData(data);
+                });
+        };
+    
+        getCountriesData();
+        }, []);
+    
+        console.log(casesType);
+    
+        const onCountryChange = async (e) => {
+        const countryCode = e.target.value;
+    
+        const url =
+            countryCode === "worldwide"
+            ? "https://disease.sh/v3/covid-19/all"
+            : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+        await fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+            setInputCountry(countryCode);
+            setCountryInfo(data);
+            setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+            setMapZoom(4);
+            });
+      };
+    
 
-    const handleChange = e => {
-        setCountryInput(e.target.value);
-    }
+    
 
     return (
         <Grid  className="maindiv">
@@ -42,13 +74,13 @@ function MainDIv() {
                 <p>
                     <strong style={{color:"#6236ff", fontWeight:"800", fontSize:"20px"}}>Covid-19 </strong>Affected Areas
                 </p>
-                    <Select value={countryInput} onChange={handleChange}>
+                    <Select value={country} onChange={onCountryChange}>
                     <MenuItem value="worldwide" ><p>Worldwide</p></MenuItem>
-                        {
-                                countriesData.map((country) => (
-                                    <MenuItem value={country.country}><p>{country.country}</p></MenuItem>
-                                ))
-                        }
+                    {
+                        countries.map((country) => (
+                        <MenuItem value={country.value}>{country.name}</MenuItem>
+                        ))
+                    }
                     </Select>
                 </FormControl>
                 <Grid container className="stat__card">
@@ -60,8 +92,12 @@ function MainDIv() {
                 <div className="stat__container">
                 <h3 style={{color: "#6236ff", padding: "20px 0 0 20px"}}>Active Cases</h3>
                 <Grid className="stat__map">
-                    <WorldStat  countries={countriesData} />
-                    <Map />
+                    <WorldStat  countries={tableData} />
+                    <Map 
+                    countries={mapCountries}
+                    center={mapCenter}
+                    zoom={mapZoom}
+                    />
                 </Grid>
                 </div>
         </div>
