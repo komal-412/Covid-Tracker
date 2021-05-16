@@ -6,16 +6,7 @@ import { Grid, MenuItem, Select } from '@material-ui/core';
 
 function Stats() {
     return (
-        <Grid container direction="column" className="map_div">
-            <Grid container direction="row" style={{justifyContent: "space-between", padding: "10px"}}>
-                <p>
-                    <strong style={{color:"#6236ff", fontWeight:"800", fontSize:"20px"}}>Covid-19 </strong>Affected Areas
-                </p>
-                <Select variant="filled" style={{width:"10vw"}}>
-                    <MenuItem value="worldwide" >WorldWide</MenuItem>
-                </Select>
-            </Grid>
-            
+        <Grid container direction="column" className="map_div">            
             <MapContainer className="map"
                             zoom={1}
                             center={[-0.09, 51.505]}>

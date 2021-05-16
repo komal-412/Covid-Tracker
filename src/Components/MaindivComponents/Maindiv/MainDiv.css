@@ -12,14 +12,16 @@
 .infocard{
     margin: 20px;
 }
+.stat__container{
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+}
 .stat__map{
     display: flex;
     direction: row;
-    background-color: white;
-    padding: 10px;
-    margin: 10px;
     flex-wrap: nowrap;
-    border-radius: 10px;
+    justify-content: space-between;
 }
 .left_container{
     width: 70%;

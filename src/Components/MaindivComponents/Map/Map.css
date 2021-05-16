@@ -7,8 +7,9 @@
     align-self: center;
 }
 .leaflet-container{
-    height: 40vh;
+    height: 50vh;
     width: 35vw;
+    margin: 10px;
     border-radius:"10px";
 }
 ::-webkit-scrollbar  {
