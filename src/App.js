@@ -14,9 +14,15 @@ function App() {
             <SideBar />
             <Symptom />
           </Route>
+<<<<<<< HEAD
         <Route path='/journal'>
             <SideBar />
             <Journal />
+=======
+          <Route path='/journal'>
+            <SideBar />
+            <Journal/>
+>>>>>>> 7241903df616f1aeff917514622662ac33294034
           </Route>
         <Route path='/symptoms'>
             <SideBar />
