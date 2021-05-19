@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 function Symptoms() {
     return (
-        <div className="card">
+        <div className="card1">
                     <div  className="symptoms">
                         <img src={logo} height="150px" alt="symptom"/>
                         <h3 style={{color: "white"}}>Symptoms &nbsp;
