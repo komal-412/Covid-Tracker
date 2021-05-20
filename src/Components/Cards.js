@@ -1,4 +1,4 @@
-import logo from './MaindivComponents/Symptoms/symptoms.png'
+import logo from './MaindivComponents/RightContainer/symptoms.png'
 const Cards=[{
     til:"COUGHING",
     imgsrc:{logo},
