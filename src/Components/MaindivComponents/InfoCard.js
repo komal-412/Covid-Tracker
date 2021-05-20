@@ -44,10 +44,10 @@ const style= makeStyles({
 function InfoCard({title, cases, clr}) {
     const classes=style();
 
-    const orange = <p style={{color:"#FA6400", fontSize:"22px"}} >{cases}</p>;
-    const pink = <p style={{color:"#F9345E", fontSize:"22px"}} >{cases}</p>;
-    const blue = <p style={{color:"#817C9B", fontSize:"22px"}} >{cases}</p>;
-    const green = <p style={{color:"#1CB142", fontSize:"22px"}} >{cases}</p>;
+    const orange = <p style={{color:"#FA6400", fontSize:"20px"}} >{cases}</p>;
+const pink = <p style={{color:"#F9345E", fontSize:"20px"}} >{cases}</p>;
+    const blue = <p style={{color:"#817C9B", fontSize:"20px"}} >{cases}</p>;
+    const green = <p style={{color:"#1CB142", fontSize:"20px"}} >{cases}</p>;
 
     const getCases = () =>{
         switch(clr){

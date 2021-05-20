@@ -1,0 +1,14 @@
+.graph{
+    padding: 20px;
+    width: 30%;
+    border-radius: 20px;
+    margin: 20px 10px;
+    background-color: white;
+    display: flex;
+}
+
+.graph__card{
+    width: 30%;
+    border-radius: 20px;
+    margin-left: 10px;
+}

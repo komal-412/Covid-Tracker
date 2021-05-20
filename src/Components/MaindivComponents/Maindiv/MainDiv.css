@@ -48,6 +48,7 @@
     padding: 0 10px;
     margin: 10px
 }
+
 @media screen and (max-width: 990px) {
     .stat__map{
         direction: column;
@@ -60,7 +61,7 @@
         flex-wrap: wrap;
     }
     .right_container{
-        display: flex;
-        direction: row;
+        flex-direction: row;   
+        flex-wrap: nowrap;
     }
 }

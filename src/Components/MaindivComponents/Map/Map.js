@@ -19,7 +19,7 @@ function Map({ countries, center, zoom }) {
                                         center={[country.countryInfo.lat, country.countryInfo.long]} 
                                         fillOpacity={0.5} 
                                         stroke={false}
-                                        radius={country.cases/1000000}
+                                        radius={(country.cases/1000000)+3}
                                         fillColor={"red"}
                                     >
                                         <Tooltip direction="right" offset={[-8, -2]} opacity={1}>
