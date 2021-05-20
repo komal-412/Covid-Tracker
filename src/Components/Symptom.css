@@ -1,4 +1,36 @@
-.card_title{
+ .card_title{
     color:black;
-    background-color: blue;
+}
+.cards{
+    width:100%;
+    display: flex;
+   flex-wrap: wrap;
+}
+
+  .card{
+      height: 35vh;
+      width: 18vw;
+      margin: 3%;
+      padding: 1.5%;
+      margin-bottom: 2%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .card_img{
+      border-radius: 1%;
+      height: 28vh;
+      width: 18vw;
+  }
+  .card:hover{
+    height: 50vh;
+    transform: scale(1.05,1.05);
+    box-shadow:  0px 30px 18px -8px rgb(rgb(199, 146, 146), green, blue);
+    display: all;
+  }
+
+.card_explanation{
+    width: 18vw;
+    align-content: center;
+    display: none;
 }
