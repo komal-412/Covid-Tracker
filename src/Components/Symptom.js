@@ -1,8 +1,11 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, Component} from 'react';
 import './Symptom.css'
 import Cards from './Cards'
 import {TweenMax, Power3} from 'gsap'
 import { CompareArrowsOutlined } from '@material-ui/icons';
+import styled, {keyframes} from 'styled-components';
+import {bounce} from 'react-animations';
+
 
 
 function Card(){
@@ -23,7 +26,8 @@ function Card(){
 
 
     console.log(logoItem);
-    return(
+    return( 
+    <>
         <div  ref={el => {logoItem = el}} className="cards">
     <div className="card">
     <div className="card_info">
@@ -68,6 +72,7 @@ function Card(){
         </div>
     </div>
 </div>
+</>
     )
 }
 
