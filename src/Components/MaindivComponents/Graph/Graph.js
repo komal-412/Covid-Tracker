@@ -1,10 +1,12 @@
 import React from 'react'
-import Chart from 'chart.js'
+import { Line } from "react-chartjs-2";
+import './Graph.css'
+
 
 function Graph() {
     return (
-        <div>
-            <div>
+        <div className="graph__card">
+            <div className="graph">
                 Graph
             </div>
         </div>

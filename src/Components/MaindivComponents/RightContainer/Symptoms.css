@@ -17,3 +17,9 @@
     box-shadow: 10px 10px 53px 10px rgba(0, 0, 0, 0.5);
     margin-left: 10px;
 }
+
+@media screen and (max-width: 990px){
+    .card{
+        margin: 20px
+    }
+}

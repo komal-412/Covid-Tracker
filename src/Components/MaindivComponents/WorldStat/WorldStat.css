@@ -13,7 +13,6 @@
 .table tr{
     display: flex;
     justify-content: space-between;
-    /* border-radius: 10px; */
     height: 30px;
 }
 .table td{
@@ -21,12 +20,4 @@
     margin: 1px;
     border: none;
 }
-/* .table tr:nth-of-type(odd){
-    background-color: #e9e7e7;
-} */
 
-@media screen and (max-width: 990px) {
-    .table{
-        width: 100%;
-    }
-}

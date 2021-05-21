@@ -3,9 +3,10 @@ import React, {useState, useEffect} from 'react'
 import InfoCard from '../InfoCard'
 import './MainDiv.css'
 import Map from '../Map/Map'
-import Graph from '../Graph'
+import Graph from '../Graph/Graph'
 import WorldStat from '../WorldStat/WorldStat'
-import Symptoms from '../Symptoms/Symptoms'
+import Symptoms from '../RightContainer/Symptoms'
+import numeral from "numeral"
 
 function MainDIv() {
     const [country, setInputCountry] = useState("worldwide");
@@ -83,11 +84,11 @@ function MainDIv() {
                     }
                     </Select>
                 </FormControl>
-                <Grid container className="stat__card">
-                <InfoCard className="infocard" title="Total Cases" cases={countryInfo.cases} clr='pink' />
-                <InfoCard title="Active cases" cases={countryInfo.active} clr='orange' />
-                <InfoCard title="Recovered Cases" cases={countryInfo.recovered} clr='green' />
-                <InfoCard title="Total Deaths" cases={countryInfo.deaths} clr='blue' />
+                <Grid container className="stat__card" >
+                <InfoCard className="infocard" title="Total Cases" cases={numeral(countryInfo.cases).format("0,0")} clr='pink' />
+                <InfoCard title="Active cases" cases={numeral(countryInfo.active).format("0,0")} clr='orange' />
+                <InfoCard title="Recovered Cases" cases={numeral(countryInfo.recovered).format("0,0")} clr='green' />
+                <InfoCard title="Total Deaths" cases={numeral(countryInfo.deaths).format("0,0")} clr='blue' />
                 </Grid>
                 <div className="stat__container">
                 <h3 style={{color: "#6236ff", padding: "20px 0 0 20px"}}>Active Cases</h3>
@@ -103,18 +104,7 @@ function MainDIv() {
         </div>
         <div className="right_container">
             <Symptoms className="symptom_card"/>
-            <div className="states_data">
-                <h4>Top States</h4>
-                <div className="state 1">
-                    <p>Delhi</p>
-                </div>
-                <div className="state 2">
-                <p>Delhi</p>
-                </div>
-                <div className="state 3">
-                <p>Delhi</p>
-                </div>
-            </div>
+            <Graph casesType={casesType}/>
         </div>
         </Grid>
         
