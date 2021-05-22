@@ -1,37 +1,36 @@
-import React, {useRef, useEffect, Component} from 'react';
+import React from 'react';
 import './Symptom.css'
 import Cards from './Cards'
-import {TweenMax, Power3} from 'gsap'
 import { CompareArrowsOutlined } from '@material-ui/icons';
-import styled, {keyframes} from 'styled-components';
-import {bounce} from 'react-animations';
+import Fade from 'react-reveal/Fade';
 
 
 
 function Card(){
-    let logoItem = useRef(null);
-
-    useEffect(() =>{
-        console.log(logoItem);
-        TweenMax.to(
-            logoItem,
-            .8,
-            {
-                opacity: 1,
-                y: -20,
-                ease: Power3.easeOut
-            }
-            )
-    }, [])
-
-
-    console.log(logoItem);
+   
     return( 
     <>
-        <div  ref={el => {logoItem = el}} className="cards">
+    <div className="display">
+        <div className="upperdisplay">
+              <div className="info">
+              <Fade top delay={1000}>
+                  <h1>STAY HOME <br/> STAY SAFE</h1>
+                  </Fade>
+                  <p>
+                  COVID-19 can spread like wildfire and cause mass infection if proper precautionary steps are not taken. 
+                  Hence, we have to break the chain and restrain the community transmission of this virus. 
+                  <br/>And the best way to that is by quarantining yourselves within your houses. 
+                  We suggest that for your safety and your community security, staying at home is the best way to do your part at the moment.
+                 </p>
+              </div>
+              <div className="gif">
+                  <img  src="https://media.giphy.com/media/LLxW0TUxhzAfeby7T5/giphy.gif" className="image"/>
+              </div>
+        </div>
+        <div className="cards">
             <Cards 
                 src={"https://www.homeopathicremediesblog.com/wp-content/uploads/2016/09/Cough-and-Cold.jpg"} 
-                heading={"Coughing"}
+                heading={"COUGHING"}
                 desc={"Considering that COVID-19 irritates lung tissue, the cough is dry and persistent. It is accompanied with shortness of breath and muscle pain."}
             />
             <Cards 
@@ -59,6 +58,7 @@ function Card(){
                 heading={"LOTS OF PHLEGM"}
                 desc={"Considering that COVID-19 irritates lung tissue, the cough is dry and persistent. It is accompanied with shortness of breath and muscle pain."}
             />
+       </div>
 </div>
 </>
     )
