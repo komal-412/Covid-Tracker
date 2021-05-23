@@ -6,9 +6,10 @@ import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Button, IconButton, makeStyles, MenuItem } from '@material-ui/core';
-import { AnnouncementRounded, HealingRounded, HomeRounded, MenuBook, ViewHeadlineRounded } from '@material-ui/icons';
+import { AnnouncementRounded, FormatListBulletedRounded, HealingRounded, HomeRounded, MenuBook, ViewHeadlineRounded } from '@material-ui/icons';
 import { Link } from 'react-router-dom'
 import Slide from '@material-ui/core/Slide';
+import './Sidebar.css';
 
 function SideBar() {
         return (

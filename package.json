@@ -9,10 +9,6 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-<<<<<<< HEAD
-    "bootstrap": "^5.0.1",
-=======
->>>>>>> 7d05680a74bb5c7e9f27742332945e99b90fa1e4
     "chart.js": "^3.2.1",
     "gsap": "^3.6.1",
     "leaflet": "^1.7.1",
