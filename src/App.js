@@ -3,7 +3,8 @@ import SideBar from './Components/SideBar'
 import MainDiv from './Components/MaindivComponents/Maindiv/MainDiv'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Symptom from './Components/Symptom';
-import Journal from './Components/Journal';
+import Journal from './Components/Journal/Journal';
+import axios from "axios";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
             <SideBar />
             <Symptom />
           </Route>
-          <Route path='/journal'>
+          <Route path='/Journal'>
             <SideBar />
             <Journal/>
           </Route>
