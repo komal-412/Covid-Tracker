@@ -7,14 +7,16 @@ function Cards({ src, heading, desc }){
    
 
     return (
-        <Zoom bottom>
+    <Zoom bottom>
         <div className="card">
-        <div className="card_info">
-            <img  src={src} className="card_img"/>
-                <h3 className="card_title">{heading}</h3>
-                <p className="card_explanation">{desc}</p>
+            <div className="container">
+                <img src={src} className="card_img"/>
+                <p className="card_explanation">{desc}</p> 
             </div>
-    </div>
+           <div className="card_info">
+                <h3 className="card_title">{heading}</h3>
+           </div>
+        </div>
     </Zoom>
 
     )
