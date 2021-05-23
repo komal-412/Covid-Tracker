@@ -6,6 +6,7 @@
     padding: 50px;
     flex-wrap: nowrap;
     width: 100%;
+    margin-top: 20px;
 }
 .upper_container{
     display: flex; 

@@ -1,14 +1,14 @@
 .symptoms{
-    padding: 20px;
+    padding: 30px;
     margin-left: 50px;
-    height: 45vh;
+    height: 50vh;
     border-radius: 20px;
     background-color: #6263ff;
     box-shadow: 10px 10px 53px 10px rgba(0, 0, 0, 0.5);
 }
 
 .symptoms__content{
-    margin: 20px;
+    margin: 30px;
     text-align: justify;
 }
 

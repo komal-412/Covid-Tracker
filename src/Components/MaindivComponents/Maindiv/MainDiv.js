@@ -72,9 +72,9 @@ function MainDIv() {
             <div className="upper_container">
                 <div>
                 <FormControl style={{marginBottom: "50px"}}>
-                <p>
+                <p style={{fontSize: "16px"}}>
                     <strong style={{color:"#6236ff", fontWeight:"800", fontSize:"20px"}}>Covid-19 </strong>Affected Areas
-                </p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <Select value={country} onChange={onCountryChange}>
                     <MenuItem value="worldwide" ><p>Worldwide</p></MenuItem>
                     {
@@ -83,6 +83,7 @@ function MainDIv() {
                         ))
                     }
                     </Select>
+                    </p>
                 </FormControl>
                 
                 <Grid container className="stat__card" >
@@ -94,7 +95,7 @@ function MainDIv() {
                 </div>
                 <Symptoms className="symptom_card"/>
             </div>
-            <h3 style={{color: "#6236ff", padding: "20px 0 0 20px"}}>Active Cases</h3>
+            <h2 style={{color: "#6236ff", padding: "20px 0 0 20px"}}>Active Cases</h2>
                 <Grid direction="row" className="stat__container">
                 
                 <Grid className="stat__map" >

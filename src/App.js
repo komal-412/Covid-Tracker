@@ -4,7 +4,7 @@ import MainDiv from './Components/MaindivComponents/Maindiv/MainDiv'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Symptom from './Components/Symptom';
 import Journal from './Components/Journal/Journal';
-import axios from "axios";
+
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
             <Symptom />
           </Route>
         <Route path='/'>
-           {/* <SideBar /> */}
+           <SideBar />
             <MainDiv />
           </Route>
         </Switch>
