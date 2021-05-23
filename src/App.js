@@ -23,7 +23,7 @@ function App() {
             <Symptom />
           </Route>
         <Route path='/'>
-           <SideBar />
+           {/* <SideBar /> */}
             <MainDiv />
           </Route>
         </Switch>

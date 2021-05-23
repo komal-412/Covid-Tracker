@@ -1,9 +1,16 @@
 .maindiv{
     display: flex;
+    flex-direction: column;
     background-color: azure;
     border-radius: 20px;
-    padding: 30px;
+    padding: 50px;
     flex-wrap: nowrap;
+    width: 100%;
+}
+.upper_container{
+    display: flex; 
+    justify-content: space-between;
+    margin: 30px
 }
 .stat__card{
     display: flex;
@@ -13,25 +20,19 @@
     margin: 20px;
 }
 .stat__container{
-    background-color: white;
+    justify-content: space-between;
     margin: 5px;
     border-radius: 10px;
+    display: flex;
+    margin-left: 30px;
+    
 }
 .stat__map{
+    background-color: white;
     display: flex;
     direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
-.left_container{
-    width: 70%;
-}
-.right_container{
-    padding: 10px;
-    margin: 10px;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
 }
 .states_data{
     width: 80%;
@@ -54,14 +55,10 @@
         direction: column;
         flex-wrap: wrap;
     }
-    .left_container{
-        width: 100%;
-    }
     .maindiv{
         flex-wrap: wrap;
     }
-    .right_container{
+    .upper_container{
         flex-direction: row;   
-        flex-wrap: nowrap;
     }
 }
