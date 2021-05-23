@@ -2,7 +2,7 @@ import "./Journal.css";
 import { useEffect, useState } from "react"; 
 import NewsContent from './JournalComponents/NewsContent/NewsContent';
 import axios from "axios";
-import Footer from "./JournalComponents/Footer/Footer"
+import JournalFooter from "./JournalComponents/JournalFooter/JournalFooter"
 
 
 function Journal() {
@@ -45,7 +45,7 @@ function Journal() {
         />
       )}
       
-     <Footer />
+     <JournalFooter />
     </div>
   );
 }
