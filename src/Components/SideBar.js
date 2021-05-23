@@ -1,8 +1,14 @@
-import React from 'react'
-import './Sidebar.css'
-import { HomeRounded, HealingRounded, FormatListBulletedRounded } from '@material-ui/icons'
-import { IconButton} from '@material-ui/core'
+import React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import { Button, IconButton, makeStyles, MenuItem } from '@material-ui/core';
+import { AnnouncementRounded, HealingRounded, HomeRounded, MenuBook, ViewHeadlineRounded } from '@material-ui/icons';
 import { Link } from 'react-router-dom'
+import Slide from '@material-ui/core/Slide';
 
 function SideBar() {
         return (
@@ -36,6 +42,5 @@ function SideBar() {
             </Link>
         </div>
     );
-}
-
-export default SideBar;
+  }
+  export default SideBar;

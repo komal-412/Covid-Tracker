@@ -69,12 +69,12 @@ function MainDIv() {
     return (
         <Grid  className="maindiv">
             
-            <div className="left_container">
-            
-                <FormControl>
-                <p>
+            <div className="upper_container">
+                <div>
+                <FormControl style={{marginBottom: "50px"}}>
+                <p style={{fontSize: "16px"}}>
                     <strong style={{color:"#6236ff", fontWeight:"800", fontSize:"20px"}}>Covid-19 </strong>Affected Areas
-                </p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <Select value={country} onChange={onCountryChange}>
                     <MenuItem value="worldwide" ><p>Worldwide</p></MenuItem>
                     {
@@ -83,29 +83,36 @@ function MainDIv() {
                         ))
                     }
                     </Select>
+                    </p>
                 </FormControl>
+                
                 <Grid container className="stat__card" >
                 <InfoCard className="infocard" title="Total Cases" cases={numeral(countryInfo.cases).format("0,0")} clr='pink' />
                 <InfoCard title="Active cases" cases={numeral(countryInfo.active).format("0,0")} clr='orange' />
                 <InfoCard title="Recovered Cases" cases={numeral(countryInfo.recovered).format("0,0")} clr='green' />
                 <InfoCard title="Total Deaths" cases={numeral(countryInfo.deaths).format("0,0")} clr='blue' />
                 </Grid>
-                <div className="stat__container">
-                <h3 style={{color: "#6236ff", padding: "20px 0 0 20px"}}>Active Cases</h3>
-                <Grid className="stat__map">
-                    <WorldStat  countries={tableData} />
+                </div>
+                <Symptoms className="symptom_card"/>
+            </div>
+            <h2 style={{color: "#6236ff", padding: "20px 0 0 20px"}}>Active Cases</h2>
+                <Grid direction="row" className="stat__container">
+                
+                <Grid className="stat__map" >
+                    <Grid>
                     <Map 
                     countries={mapCountries}
                     center={mapCenter}
                     zoom={mapZoom}
                     />
+                    <Graph/>
+                    </Grid>
                 </Grid>
-                </div>
-        </div>
-        <div className="right_container">
-            <Symptoms className="symptom_card"/>
-            <Graph casesType={casesType}/>
-        </div>
+                <WorldStat  countries={tableData} countryInfo={countryInfo} />
+                </Grid>
+        
+            
+            {/* <Graph countryInfo={countryInfo}/> */}
         </Grid>
         
     )
