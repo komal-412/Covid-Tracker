@@ -5,6 +5,8 @@ a:active{
     text-decoration: none;
     color: inherit;
 }
-.Journal{
-    margin-left: 150px;
+.news{
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
 }

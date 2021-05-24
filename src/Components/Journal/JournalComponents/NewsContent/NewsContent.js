@@ -11,7 +11,7 @@ import "./NewsContent.css"
            
            {
              newsArray.map((newsItem) => (
-              <NewsCard newsItem={newsItem} key={newsItem.title} /> 
+              <NewsCard íd={newsItem.title} newsItem={newsItem} key={newsItem.title} /> 
              ))
            }
            
