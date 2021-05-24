@@ -1,7 +1,7 @@
 .maindiv{
     display: flex;
     flex-direction: column;
-    background-color: azure;
+    background-color: rgb(247, 253, 253);
     border-radius: 20px;
     flex-wrap: nowrap;
     width: 90%;
@@ -11,10 +11,11 @@
 .upper_container{
     display: flex; 
     justify-content: space-between;
-    margin: 10px
+    margin: 10px;
 }
 .stat__card{
     display: flex;
+    margin-left: 20px;
     justify-content: space-evenly;
 }
 .infocard{
@@ -22,7 +23,7 @@
 }
 .stat__container{
     justify-content: space-between;
-    margin: 5px;
+    margin: 2px;
     border-radius: 10px;
     display: flex;
     margin-left: 30px;
@@ -44,7 +45,7 @@
 .map{
     background: rgba(54, 162, 235, 0.2);
     margin-bottom: "50px";
-    box-shadow: "10px 10px 53px 10px rgba(0, 0, 0, 0.1)";
+    box-shadow: 10px 10px 53px 10px rgba(0, 0, 0, 0.1);
 }
 .bar_graph{
     background-color: white;

@@ -71,12 +71,12 @@ function MainDIv() {
             
             <div className="upper_container">
                 <div>
-                <FormControl style={{marginBottom: "20px"}}>
-                <p style={{fontSize: "16px"}}>
-                    <strong style={{color:"#6236ff", fontWeight:"800", fontSize:"20px"}}>Covid-19 </strong>Affected Areas
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <FormControl style={{marginLeft: "35px", marginBottom: "10px"}}>
+                <p style={{fontWeight:"900", fontSize:"20px"}}>
+                    <strong style={{color:"#6236ff"}}>Covid-19  &nbsp;</strong>
+                    <strong>Affected Areas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
                     <Select value={country} onChange={onCountryChange}>
-                    <MenuItem value="worldwide" ><p>Worldwide</p></MenuItem>
+                    <MenuItem value="worldwide" ><p  style={{fontWeight:"900", fontSize:"18px"}}>Worldwide</p></MenuItem>
                     {
                         countries.map((country) => (
                         <MenuItem value={country.value}>{country.name}</MenuItem>
@@ -95,7 +95,7 @@ function MainDIv() {
                 </div>
                 <Symptoms className="symptom_card"/>
             </div>
-            <h2 style={{color: "#6236ff", padding: "0px 0 0 20px"}}>Active Cases</h2>
+            <h2 style={{color: "#6236ff", marginLeft: "50px"}}>Active Cases</h2>
                 <Grid direction="row" className="stat__container">
                 
                 <Grid className="stat__map" style={{justifyContent: "space-between"}}>
