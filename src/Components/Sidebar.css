@@ -6,13 +6,12 @@
     background-color: #1A1053;
     border-radius: 20px;
     height: 100vh;
-    
     position: fixed;
     left: -20px;
 }
-.nav_icons{
+/* .nav_icons{
     margin-top: 90px;
-}
+} */
 .app__sidebar__button{
     color: #817C9B;
     font-size: 15px;
