@@ -5,8 +5,8 @@
     border-radius: 20px;
     flex-wrap: nowrap;
     width: 90%;
-    padding: 50px;
-    margin-left: 100px;
+    padding: 50px 20px;
+    margin-left: 140px;
 }
 .upper_container{
     display: flex; 

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import NewsContent from './JournalComponents/NewsContent/NewsContent';
 import axios from "axios";
 import JournalFooter from "./JournalComponents/JournalFooter/JournalFooter"
+import Carousel from './JournalComponents/Carousel'
 import apikey from "./apikey"
 
 
@@ -19,10 +20,7 @@ function Journal() {
       const news = await axios.get(`https://newsapi.org/v2/top-headlines?q=covid&country=in&apiKey=${apikey}`
       );
       setNewsArray(news.data.articles);
-       setNewsResults(news.data.totalResults);
-       
-      
-
+      setNewsResults(news.data.totalResults);
     } catch(error){
       console.log(error);
     }
@@ -34,7 +32,8 @@ function Journal() {
 
 
   return (
-    <div className="Journal" id="#home">
+    <div className="news">
+      <div className="Journal" id="#home">
      
      {newsResults && (
         <NewsContent
@@ -42,12 +41,17 @@ function Journal() {
           newsResults={newsResults}
           loadMore={loadMore}
           setLoadMore={setLoadMore}
-          
         />
       )}
-      
-     <JournalFooter />
     </div>
+    {newsResults && (
+    <Carousel
+    newsArray={newsArray}
+    newsResults={newsResults}
+    />
+    )}
+    </div>
+    
   );
 }
 
