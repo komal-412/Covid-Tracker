@@ -35,7 +35,7 @@ function WorldStat({countries, countryInfo}) {
   };
     return (
         <div className="worldstat">
-            <h2 style={{color: "#6236ff", margin: "20px", textAlign: "center"}}>World Stats</h2>
+            <h2 style={{color: "#6236ff"}}>World Stats</h2>
             <Pie data={data} style={{marginBottom: "20px"}} />
             <div  className="table">
             <div>
