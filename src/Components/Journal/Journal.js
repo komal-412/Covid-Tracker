@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import NewsContent from './JournalComponents/NewsContent/NewsContent';
 import axios from "axios";
 import JournalFooter from "./JournalComponents/JournalFooter/JournalFooter"
+import apikey from "./apikey"
 
 
 function Journal() {
@@ -15,7 +16,7 @@ function Journal() {
   const newsApi=async () => {
     try {
         
-      const news = await axios.get(`https://newsapi.org/v2/top-headlines?q=covid&country=in&apiKey=24a39dc59a3b45bc8ad1e2cafdcb27e5`
+      const news = await axios.get(`https://newsapi.org/v2/top-headlines?q=covid&country=in&apiKey=${apikey}`
       );
       setNewsArray(news.data.articles);
        setNewsResults(news.data.totalResults);
