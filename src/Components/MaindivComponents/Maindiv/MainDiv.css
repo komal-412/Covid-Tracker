@@ -3,15 +3,15 @@
     flex-direction: column;
     background-color: azure;
     border-radius: 20px;
-    padding: 50px;
     flex-wrap: nowrap;
-    width: 100%;
-    margin-top: 20px;
+    width: 90%;
+    padding: 50px;
+    margin-left: 100px;
 }
 .upper_container{
     display: flex; 
     justify-content: space-between;
-    margin: 30px
+    margin: 10px
 }
 .stat__card{
     display: flex;
@@ -29,26 +29,28 @@
     
 }
 .stat__map{
-    background-color: white;
+    
     display: flex;
     direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 .states_data{
-    width: 80%;
     background-color: white;
     padding: 10px;
     margin: 20px 10px;
     border-radius: 20px;
 }
-.states_data h4{
-    color: orangered;
-    padding: 10px;
+.map{
+    background: rgba(54, 162, 235, 0.2);
+    margin-bottom: "50px";
+    box-shadow: "10px 10px 53px 10px rgba(0, 0, 0, 0.1)";
 }
-.state{
-    padding: 0 10px;
-    margin: 10px
+.bar_graph{
+    background-color: white;
+    margin: 40px 20px;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 @media screen and (max-width: 990px) {

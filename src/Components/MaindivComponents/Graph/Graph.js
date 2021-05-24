@@ -74,7 +74,7 @@ function Crazy (){
 
   return (
     <>
-      <Bar data={data} options={options} />
+      <Bar data={data} options={options} style={{width: "600px"}} />
     </>
   );
 };

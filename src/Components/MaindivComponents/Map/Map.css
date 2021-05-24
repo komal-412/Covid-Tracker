@@ -1,16 +1,18 @@
 .stat__map{
     padding: 20px;
+    
 }
 .map{
     border-radius: 10px;
     margin: 10px;
     align-self: center;
+    
 }
 .leaflet-container{
     height: 45vh;
-    width: 50vw;
+    width: 40vw;
     border-radius:"10px";
-    margin: 50px
+    margin: 50px;
 }
 ::-webkit-scrollbar  {
     width: 10px;

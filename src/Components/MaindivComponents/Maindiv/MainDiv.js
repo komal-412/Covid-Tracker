@@ -71,7 +71,7 @@ function MainDIv() {
             
             <div className="upper_container">
                 <div>
-                <FormControl style={{marginBottom: "50px"}}>
+                <FormControl style={{marginBottom: "20px"}}>
                 <p style={{fontSize: "16px"}}>
                     <strong style={{color:"#6236ff", fontWeight:"800", fontSize:"20px"}}>Covid-19 </strong>Affected Areas
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -95,17 +95,22 @@ function MainDIv() {
                 </div>
                 <Symptoms className="symptom_card"/>
             </div>
-            <h2 style={{color: "#6236ff", padding: "20px 0 0 20px"}}>Active Cases</h2>
+            <h2 style={{color: "#6236ff", padding: "0px 0 0 20px"}}>Active Cases</h2>
                 <Grid direction="row" className="stat__container">
                 
-                <Grid className="stat__map" >
+                <Grid className="stat__map" style={{justifyContent: "space-between"}}>
                     <Grid>
-                    <Map 
+                        <div className="map" style={{}}>
+                        <Map 
                     countries={mapCountries}
                     center={mapCenter}
                     zoom={mapZoom}
                     />
+                        </div>
+                    <div className="bar_graph">
                     <Graph/>
+                    </div>
+                    
                     </Grid>
                 </Grid>
                 <WorldStat  countries={tableData} countryInfo={countryInfo} />
