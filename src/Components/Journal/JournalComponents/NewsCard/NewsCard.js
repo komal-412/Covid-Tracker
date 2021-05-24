@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./NewsCard.css";
 
 const NewsCard = ({ newsItem }) => {
@@ -10,7 +10,7 @@ const NewsCard = ({ newsItem }) => {
   const time = hour > 12 ? true : false;
 
   return (
-    <div className="newsCard"  >
+    <div className="newsCard">
       <img
         alt={newsItem.title}
         src={
@@ -22,7 +22,7 @@ const NewsCard = ({ newsItem }) => {
       />
       <div className="newsText">
         <div>
-          <span className="title" >{newsItem.title}</span>
+          <span className="title">{newsItem.title}</span>
           <br />
           <span className="author">
             <a href={newsItem.url} target="__blank">
