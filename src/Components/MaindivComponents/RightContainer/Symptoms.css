@@ -1,10 +1,11 @@
 .symptoms{
     padding: 20px;
     margin-left: 30px;
-    height: 50vh;
+    margin-bottom: 30px;
+    height: 40vh;
     border-radius: 20px;
     background-color: #6263ff;
-    box-shadow: 10px 10px 53px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.5);
 }
 
 .symptoms__content{
