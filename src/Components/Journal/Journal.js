@@ -2,7 +2,6 @@ import "./Journal.css";
 import { useEffect, useState } from "react"; 
 import NewsContent from './JournalComponents/NewsContent/NewsContent';
 import axios from "axios";
-import JournalFooter from "./JournalComponents/JournalFooter/JournalFooter"
 import apikey from "./apikey"
 
 
@@ -35,7 +34,7 @@ function Journal() {
 
   return (
     <div className="Journal" id="#home">
-     
+     <h2 style={{textAlign: "center"}}>Stay Updated</h2>
      {newsResults && (
         <NewsContent
           newsArray={newsArray}
@@ -45,8 +44,6 @@ function Journal() {
           
         />
       )}
-      
-     <JournalFooter />
     </div>
   );
 }

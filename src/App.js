@@ -2,7 +2,7 @@ import './App.css';
 import SideBar from './Components/SideBar'
 import MainDiv from './Components/MaindivComponents/Maindiv/MainDiv'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Symptom from './Components/Symptom';
+import Symptom from './Components/Symptom/Symptom';
 import Journal from './Components/Journal/Journal';
 
 

@@ -6,7 +6,7 @@ import "./NewsContent.css"
       
      return (
        
-     <Container maxWidth="md">
+     <Container className="newsContent" maxWidth="md">
          <div className="content">
            
            {

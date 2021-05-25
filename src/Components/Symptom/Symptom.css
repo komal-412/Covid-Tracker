@@ -17,12 +17,14 @@
    margin-top: 6%;
  }
  h1{
-  font-size: 360%; 
+  font-size: 3rem; 
   margin-top: 0%;
+  font-family: san-serif, Quicksand;
+  /* color: #1A1053 */
  }
  .info{
    width:60%;
-   font-family: fantasy;
+   font-family: Manrope;
    margin-left: 5%
  }
  .image{
@@ -37,7 +39,7 @@
     font-weight: 700;
     text-align: center;
 }
-.cards{
+.cards{ 
     width:90%;
     display: flex;
     flex-wrap: wrap;

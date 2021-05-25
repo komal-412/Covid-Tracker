@@ -72,14 +72,15 @@ function MainDIv() {
             <div className="upper_container">
                 <div>
                 <FormControl style={{marginLeft: "35px", marginBottom: "10px"}}>
-                <p style={{fontWeight:"900", fontSize:"20px"}}>
+                <h2>Covid Tracker</h2>
+                <p style={{fontSize:"20px"}}>
                     <strong style={{color:"#6236ff"}}>Covid-19  &nbsp;</strong>
                     <strong>Affected Areas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
-                    <Select value={country} onChange={onCountryChange}>
-                    <MenuItem value="worldwide" ><p  style={{fontWeight:"900", fontSize:"18px"}}>Worldwide</p></MenuItem>
+                    <Select className="select" value={country} onChange={onCountryChange}>
+                    <MenuItem value="worldwide" ><p >Worldwide</p></MenuItem>
                     {
                         countries.map((country) => (
-                        <MenuItem value={country.value}>{country.name}</MenuItem>
+                        <MenuItem value={country.value} >{country.name}</MenuItem>
                         ))
                     }
                     </Select>
@@ -95,12 +96,12 @@ function MainDIv() {
                 </div>
                 <Symptoms className="symptom_card"/>
             </div>
-            <h2 style={{color: "#6236ff", marginLeft: "50px"}}>Active Cases</h2>
+            <h2 style={{marginLeft: "50px"}}>Active Cases</h2>
                 <Grid direction="row" className="stat__container">
                 
                 <Grid className="stat__map" style={{justifyContent: "space-between"}}>
                     <Grid>
-                        <div className="map" style={{}}>
+                        <div className="map">
                         <Map 
                     countries={mapCountries}
                     center={mapCenter}
@@ -115,9 +116,6 @@ function MainDIv() {
                 </Grid>
                 <WorldStat  countries={tableData} countryInfo={countryInfo} />
                 </Grid>
-        
-            
-            {/* <Graph countryInfo={countryInfo}/> */}
         </Grid>
         
     )
