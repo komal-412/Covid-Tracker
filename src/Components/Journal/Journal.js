@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import NewsContent from './JournalComponents/NewsContent/NewsContent';
 import axios from "axios";
 import JournalFooter from "./JournalComponents/JournalFooter/JournalFooter"
-import Carousel from './JournalComponents/Carousel'
 import apikey from "./apikey"
 
 
