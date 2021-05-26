@@ -14,7 +14,6 @@ function MainDIv() {
     const [countries, setCountries] = useState([]);
     const [mapCountries, setMapCountries] = useState([]);
     const [tableData, setTableData] = useState([]);
-    const [casesType, setCasesType] = useState("cases");
     const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
     const [mapZoom, setMapZoom] = useState(3);
 
@@ -44,8 +43,6 @@ function MainDIv() {
         getCountriesData();
         }, []);
     
-        console.log(casesType);
-    
         const onCountryChange = async (e) => {
         const countryCode = e.target.value;
     
@@ -58,7 +55,7 @@ function MainDIv() {
             .then((data) => {
             setInputCountry(countryCode);
             setCountryInfo(data);
-            setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+            setMapCenter([data.countryInfo["lat"], data.countryInfo["long"]]);
             setMapZoom(1);
             });
         };

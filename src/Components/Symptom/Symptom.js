@@ -1,7 +1,6 @@
 import React from 'react';
 import './Symptom.css'
 import Cards from './Cards'
-import { CompareArrowsOutlined } from '@material-ui/icons';
 import Fade from 'react-reveal/Fade';
 import homelogo from './house.png' ;
 
