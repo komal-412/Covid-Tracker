@@ -24,11 +24,9 @@ function Map({ countries, center, zoom }) {
                                     >
                                         <Tooltip direction="right" offset={[-8, -2]} opacity={1}>
                                         <div className="info-container">
-                                            <div
-                                                className="info-flag"
-                                                style={{ backgroundImage: `url(${country.countryInfo.flag})` }}
-                                            ></div>
-                                            <div className="info-name">{country.country}</div>
+                                            <div className="info-name">
+                                            <img alt="flag" src={`${country.countryInfo.flag}`} height="15px"/>
+                                                &nbsp;&nbsp;{country.country}</div>
                                             <div className="info-confirmed">
                                                 Cases: {country.cases}
                                             </div>
