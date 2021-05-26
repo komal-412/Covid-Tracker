@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardContent } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import BarChartRoundedIcon from '@material-ui/icons/BarChartRounded';
+import Bounce from 'react-reveal/Bounce';
 
 const style= makeStyles({
     container:{
@@ -61,6 +62,7 @@ const pink = <p style={{color:"#F9345E", fontSize:"20px"}} >{cases}</p>;
 
     return (
         
+        <Bounce top delay={1000}>
         <div>
             <Card className={classes.container} >
                 <CardContent className={classes.card}>
@@ -70,6 +72,7 @@ const pink = <p style={{color:"#F9345E", fontSize:"20px"}} >{cases}</p>;
                 <BarChartRoundedIcon className={classes.icon}/>
             </Card>
         </div>
+        </Bounce>
     )
 }
 
