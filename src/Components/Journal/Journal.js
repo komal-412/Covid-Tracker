@@ -10,7 +10,7 @@ function Journal() {
   const [newsArray,setNewsArray]=useState([]);
   const [newsResults,setNewsResults]=useState();
   const [loadMore, setLoadMore] = useState(20);
-  
+
 
   const newsApi=async () => {
     try {
