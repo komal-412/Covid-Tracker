@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./NewsCard.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const NewsCard = ({ newsItem }) => {
   // console.log(newsItem);
@@ -9,8 +11,13 @@ const NewsCard = ({ newsItem }) => {
   const hour = parseInt(date[4].substring(0, 2)); //
   const time = hour > 12 ? true : false;
 
+  
+  useEffect(()=> {
+    Aos.init({delay: 500});
+  },[]);
+
   return (
-    <div className="newsCard">
+    <div data-aos="flip-left" className="newsCard">
       <img
         alt={newsItem.title}
         src={

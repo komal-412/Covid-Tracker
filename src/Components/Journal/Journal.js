@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import NewsContent from './JournalComponents/NewsContent/NewsContent';
 import axios from "axios";
 import JournalFooter from "./JournalComponents/JournalFooter/JournalFooter"
-import Carousel from './JournalComponents/Carousel'
 import apikey from "./apikey"
 
 
@@ -12,7 +11,7 @@ function Journal() {
   const [newsArray,setNewsArray]=useState([]);
   const [newsResults,setNewsResults]=useState();
   const [loadMore, setLoadMore] = useState(20);
-  
+
 
   const newsApi=async () => {
     try {
