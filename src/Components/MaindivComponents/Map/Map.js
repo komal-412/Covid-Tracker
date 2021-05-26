@@ -2,7 +2,7 @@ import React from 'react'
 import './Map.css'
 import { CircleMarker, TileLayer, MapContainer, Tooltip } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
-import { Grid, MenuItem, Select } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 function Map({ countries, center, zoom }) {
     return (

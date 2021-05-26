@@ -6,5 +6,7 @@ a:active{
     color: inherit;
 }
 .Journal{
-    margin-left: 150px;
+    margin-left: 140px;
+    width: 100vw;
+    background-color: rgba(65, 179, 255, 0.103);
 }
