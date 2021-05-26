@@ -11,8 +11,7 @@ function Map({ countries, center, zoom }) {
                             center={center} zoom={1}>
                             <TileLayer 
                             url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
-                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                            />
+                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
                             {
                                 countries.map((country) => (
                                     <CircleMarker 
@@ -20,8 +19,7 @@ function Map({ countries, center, zoom }) {
                                         fillOpacity={0.5} 
                                         stroke={false}
                                         radius={(country.cases/1000000)+3}
-                                        fillColor={"red"}
-                                    >
+                                        fillColor={"red"}>
                                         <Tooltip direction="right" offset={[-8, -2]} opacity={1}>
                                         <div className="info-container">
                                             <div className="info-name">
@@ -41,7 +39,6 @@ function Map({ countries, center, zoom }) {
                                     </CircleMarker>
                                 ))
                             }
-                            
                     </MapContainer>
         </Grid>
     )

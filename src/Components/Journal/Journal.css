@@ -6,7 +6,19 @@ a:active{
     color: inherit;
 }
 .Journal{
-    margin-left: 140px;
-    width: 100vw;
     background-color: rgba(65, 179, 255, 0.103);
+    height: 100%;
+    width: 100%;
 }
+.navbar {
+    background-color: white ;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  .main {
+    margin: 15vh 0px 0px 10vw;
+  }
+
