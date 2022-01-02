@@ -2,8 +2,7 @@ import "./Journal.css";
 import { useEffect, useState } from "react"; 
 import NewsContent from './JournalComponents/NewsContent/NewsContent';
 import axios from "axios";
-import apikey from "./apikey"
-import React from "react";
+// import apikey from "./apikey"
 
 
 function Journal() {
@@ -11,7 +10,7 @@ function Journal() {
   const [newsArray,setNewsArray]=useState([]);
   const [newsResults,setNewsResults]=useState();
   const [loadMore, setLoadMore] = useState(20);
-
+  
 
   const newsApi=async () => {
     try {
@@ -27,18 +26,16 @@ function Journal() {
       console.log(error);
     }
   };
+   //console.log(newsArray);
   useEffect(() => {
     newsApi();
   },[newsResults, loadMore]);
 
 
   return (
-    <div className="Journal">
-    <div class="navbar">
-      <h2>Stay Updated</h2>
-    </div>
-    <div class="main">
-    {newsResults && (
+    <div className="Journal" id="#home">
+     <h2 style={{textAlign: "center"}}>Stay Updated</h2>
+     {newsResults && (
         <NewsContent
           newsArray={newsArray}
           newsResults={newsResults}
@@ -48,11 +45,8 @@ function Journal() {
         />
       )}
     </div>
-</div>
   );
 }
 
 export default Journal;
 
-
-{/*  */}

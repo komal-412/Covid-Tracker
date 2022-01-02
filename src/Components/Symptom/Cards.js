@@ -4,6 +4,8 @@ import Zoom from 'react-reveal/Zoom';
     
 
 function Cards({ src, heading, desc }){
+   
+
     return (
     <Zoom bottom>
         <div className="card">
@@ -16,6 +18,7 @@ function Cards({ src, heading, desc }){
            </div>
         </div>
     </Zoom>
+
     )
 }
 
